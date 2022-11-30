@@ -1,0 +1,4 @@
+<% @clothes.each do |clothe| %>
+  <%= clothe.name %>
+  <%= cl_image_tag clothe.photo.key, height: 250, width: 250, crop: :fill, class:"card-img"%>
+<% end %>
