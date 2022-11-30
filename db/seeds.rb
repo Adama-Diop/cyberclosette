@@ -55,3 +55,10 @@ end
 # clothe1 = Clothe.new(user: user1, color: color1, name: "pull")
 # clothe1.photo.attach
 # clothe1.save
+clothe2 = Clothe.new(user: user1, color: Color.find_by(name: "blue"), moods: Mood.find_by(name: "week-end"), seasons: Season.find_by(name: "été"),
+categories: Category.find_by(name: "bottom"), picture: "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669816843/xhrk5xt9hv3kpgcn90hn.png")
+clothe2.save
+
+clothe3 = Clothe.new(user: user1, color: Color.find_by(name: "black"), moods: Mood.find_by(name: "soirée"), seasons: Season.find_by(name: "hiver"),
+  categories: Category.find_by(name: "bottom"), picture: "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669821581/ezr8wbr3mvuqnmwqrfew.png")
+clothe3.save
