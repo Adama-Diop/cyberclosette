@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "pages#home"
+  root to: "clothes#today_outfit"
+  post "/create_element", to: "outfits#create_element"
   resources :clothes, only: [:new, :create, :index, :show]
 
 

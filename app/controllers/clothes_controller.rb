@@ -24,7 +24,10 @@ class ClothesController < ApplicationController
   end
 
   def today_outfit
-    # algo pour choisir tenue
+    @outfit = Outfit.where(user: current_user).find_by(date: Date.today)
+    locked_clothes_count = @outfit ? @outfit.clothes.count : 0
+    @locked_clothes = @outfit ? @outfit.clothes : []
+    @clothes = Clothe.all.sample(3 - locked_clothes_count)
     # si un outfit existe avec la date d'aujourdh'ui on affiche
     # sinon
     # on predn un fringue de chaque categories au hasard
@@ -36,7 +39,7 @@ class ClothesController < ApplicationController
   private
 
   def clothe_params
-    params.require(:clothe).permit(:name, :picture)
+    params.require(:clothe).permit(:picture)
   end
 
   def set_clothe
