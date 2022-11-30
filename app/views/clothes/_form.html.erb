@@ -1,0 +1,8 @@
+<%= simple_form_for(clothe) do |f| %>
+  <h2> Nouvelle fringue </h2>
+  <br>
+  <%= f.input :name %>
+  <%= f.input :picture, as: :file %>
+  <br>
+  <%= f.submit  %>
+<% end %>
