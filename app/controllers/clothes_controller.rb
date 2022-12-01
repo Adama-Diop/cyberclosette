@@ -37,7 +37,7 @@ class ClothesController < ApplicationController
     @shoes = Clothe.find_by_category("shoes", @locked_clothes)
     @shoes ||= Clothe.select_by_category("shoes").sample
 
-    @clothes = [@top, @bottom, @shoes].uniq
+    @clothes = [@top, @bottom, @shoes].uniq.reject(&:blank?)
 
     # si un outfit existe avec la date d'aujourdh'ui on affiche
     # sinon
@@ -50,7 +50,7 @@ class ClothesController < ApplicationController
   private
 
   def clothe_params
-    params.require(:clothe).permit(:picture)
+    params.require(:clothe).permit(:photo)
   end
 
   def set_clothe
