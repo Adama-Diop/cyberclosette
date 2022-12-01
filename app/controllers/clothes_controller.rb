@@ -39,6 +39,7 @@ class ClothesController < ApplicationController
     # @clothes = [@top, @bottom, @shoes].uniq
 
 
+
     # si un outfit existe avec la date d'aujourdh'ui on affiche
     # sinon
     # on predn un fringue de chaque categories au hasard
@@ -50,7 +51,7 @@ class ClothesController < ApplicationController
   private
 
   def clothe_params
-    params.require(:clothe).permit(:picture)
+    params.require(:clothe).permit(:photo)
   end
 
   def set_clothe
