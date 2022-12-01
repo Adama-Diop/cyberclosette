@@ -22,5 +22,24 @@ class Clothe < ApplicationRecord
 
   def self.find_by_category(category_name, clothes = [])
     select_by_category(category_name, clothes).first
+
+  end
+
+  def category_name
+    categories.first.name
+  end
+
+  def is_locked?(a_user)
+    today_outfit = Outfit.find_for_today(a_user)
+    return false if !today_outfit
+    return today_outfit.clothes.include?(self)
+  end
+
+  def self.locked_in(clothes, user)
+    outfit = Outfit.find_for_today(user)
+    return nil if !outfit
+    clothes.find do |clothe|
+      outfit.clothes.include?(clothe)
+    end
   end
 end
