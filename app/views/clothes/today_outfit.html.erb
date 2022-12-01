@@ -1,16 +1,29 @@
 <div class="container">
   <div class="d-flex w-50">
 
-    <% @clothes.each do |clothe| %>
+    <% @clothes.each_with_index do |clothe, index| %>
+
       <div class="card mx-2 p-2 rounded">
         <p>
-          <%= clothe.categories.first.name + " de couleur " + clothe.color.name %>
+          <%= clothe.category_name + " de couleur " + clothe.color.name %>
         </p>
-        <%= form_with url: create_element_path, method: :post do |f| %>
-          <%= f.hidden_field :clothe_id, value: clothe.id %>
-          <%= f.submit "", class: "btn btn-primary"%>
+
+        <% if clothe.is_locked?(current_user) %>
+
+          <%= form_with url: delete_element_path, method: :post do |f| %>
+            <%= f.hidden_field :clothe_id, value: clothe.id %>
+            <%= f.submit "Unlocker", class: "btn btn-primary"%>
+          <% end %>
+        <% else %>
+
+          <%= form_with url: create_element_path, method: :post do |f| %>
+            <%= f.hidden_field :clothe_id, value: clothe.id %>
+            <%= f.submit "Locker", class: "btn btn-primary"%>
+            <% end %>
         <% end %>
       </div>
     <% end %>
   </div>
 </div>
+
+<% console %>
