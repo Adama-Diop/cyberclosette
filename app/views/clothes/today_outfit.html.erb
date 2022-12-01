@@ -1,16 +1,29 @@
 <div class="container">
-  <div class="d-flex w-50">
-
-    <% @clothes.each do |clothe| %>
-      <div class="card mx-2 p-2 rounded">
-        <p>
-          <%= clothe.categories.first.name + " de couleur " + clothe.color.name %>
-        </p>
-        <%= form_with url: create_element_path, method: :post do |f| %>
-          <%= f.hidden_field :clothe_id, value: clothe.id %>
-          <%= f.submit "", class: "btn btn-primary"%>
-        <% end %>
+<% @categories.each_with_index do |category, id| %>
+<div id="carouselExampleControlsNoTouching-<%=id%>" class="carousel slide" data-bs-touch="false">
+<h1><%= category.name %></h1>
+  <div class="carousel-inner">
+    <% category.clothes.each_with_index do |type, index| %>
+    <% if index == 0 %>
+      <div class="carousel-item active">
+       <img src="https://picsum.photos/id/237/536/354" class="d-block w-100" alt="...">
+      </div>
+      <% else %>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/id/237/536/354" class="d-block w-100" alt="...">
       </div>
     <% end %>
+    <% end %>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching-<%=id%>" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching-<%=id%>" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  <% end %>
+
 </div>
