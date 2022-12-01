@@ -27,7 +27,7 @@ class ClothesController < ApplicationController
     @outfit = Outfit.where(user: current_user).find_by(date: Date.today)
     locked_clothes_count = @outfit ? @outfit.clothes.count : 0
     @locked_clothes = @outfit ? @outfit.clothes : []
-
+    @categories = Category.all
     # @clothes = Clothe.all.sample(3 - locked_clothes_count)
 
     @top = Clothe.find_by_category("top", @locked_clothes)
@@ -36,7 +36,6 @@ class ClothesController < ApplicationController
     @bottom ||= Clothe.select_by_category("bottom").sample
     @shoes = Clothe.find_by_category("shoes", @locked_clothes)
     @shoes ||= Clothe.select_by_category("shoes").sample
-
     @clothes = [@top, @bottom, @shoes].uniq
 
 
