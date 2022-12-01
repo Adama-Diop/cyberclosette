@@ -33,4 +33,12 @@ class Clothe < ApplicationRecord
     return false if !today_outfit
     return today_outfit.clothes.include?(self)
   end
+
+  def self.locked_in(clothes, user)
+    outfit = Outfit.find_for_today(user)
+    return nil if !outfit
+    clothes.find do |clothe|
+      outfit.clothes.include?(clothe)
+    end
+  end
 end
