@@ -27,7 +27,18 @@ class ClothesController < ApplicationController
     @outfit = Outfit.where(user: current_user).find_by(date: Date.today)
     locked_clothes_count = @outfit ? @outfit.clothes.count : 0
     @locked_clothes = @outfit ? @outfit.clothes : []
-    @clothes = Clothe.all.sample(3 - locked_clothes_count)
+
+    # @clothes = Clothe.all.sample(3 - locked_clothes_count)
+
+    @top = Clothe.find_by_category("top", @locked_clothes)
+    @top ||= Clothe.select_by_category("top").sample
+    @bottom = Clothe.find_by_category("bottom", @locked_clothes)
+    @bottom ||= Clothe.select_by_category("bottom").sample
+    @shoes = Clothe.find_by_category("shoes", @locked_clothes)
+    @shoes ||= Clothe.select_by_category("shoes").sample
+
+    @clothes = [@top, @bottom, @shoes].uniq
+
     # si un outfit existe avec la date d'aujourdh'ui on affiche
     # sinon
     # on predn un fringue de chaque categories au hasard
