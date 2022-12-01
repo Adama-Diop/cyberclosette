@@ -11,9 +11,9 @@ class OutfitsController < ApplicationController
     # on récupère le clothe avec le clothe_id
     @clothe = Clothe.find(params[:clothe_id].to_i)
     # on associe le clothe à l'outfit
+
     @outfit.clothes.push(@clothe)
-    raise
-    @outfit.save
+    redirect_to root_path if @outfit.save
 
   end
 end
