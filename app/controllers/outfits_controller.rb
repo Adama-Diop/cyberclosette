@@ -12,8 +12,21 @@ class OutfitsController < ApplicationController
     @clothe = Clothe.find(params[:clothe_id].to_i)
     # on associe le clothe à l'outfit
     @outfit.clothes.push(@clothe)
-    raise
     @outfit.save
 
+  end
+
+  def delete_element
+
+   @outfit = Outfit.where(user: current_user).find_by(date: Date.today)
+   @clothe = Clothe.find(params[:clothe_id].to_i)
+   @outfit.clothes.delete(@clothe)
+   @outfit.save
+  end
+
+  def destroy
+    @clothe = Clothe.find(params[:clothe_id])
+    @clothe.destroy
+    redirect_to create_element_path
   end
 end

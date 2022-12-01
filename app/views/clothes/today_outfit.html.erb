@@ -14,8 +14,9 @@
         </p>
         <%= form_with url: create_element_path, method: :post do |f| %>
           <%= f.hidden_field :clothe_id, value: clothe.id %>
-          <%= f.submit "", class: "btn btn-primary"%>
+          <%= f.submit "locker", class: "btn btn-primary"%>
         <% end %>
+
       </div>
     <% end %>
   </div>
