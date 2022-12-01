@@ -1,6 +1,7 @@
 <div class="container">
 
 
+
 <% @categories.each_with_index do |category, id| %>
 <% locked_clothe_for_category = Clothe.locked_in(category.clothes, current_user) %>
 <% if locked_clothe_for_category %>
@@ -36,6 +37,7 @@
             <%= f.hidden_field :clothe_id, value: clothe.id %>
             <%= f.submit "Locker", class: "btn btn-primary"%>
             <% end %>
+
         <% end %>
         </div>
       </div>
