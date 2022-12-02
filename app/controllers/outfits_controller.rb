@@ -14,7 +14,7 @@ class OutfitsController < ApplicationController
       @outfit.clothes.push(@clothe)
     end
 
-    redirect_to root_path(clothe: @clothe) if @outfit.save
+    redirect_to root_path if @outfit.save
   end
 
   def delete_element
