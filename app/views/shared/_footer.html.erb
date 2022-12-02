@@ -1,20 +1,21 @@
 <div id="footer-placeholder">&nbsp;</div>
 <div id="footer">
-    <i class="fa-solid fa-house" id="one"></i>
-    <i class="fa-solid fa-shirt" id="two"></i>
+
+    <%= link_to root_path, id: "one" do %>
+      <i class="fa-solid fa-house"></i>
+    <% end %>
+    <%= link_to clothes_path, id: "two" do %>
+      <i class="fa-solid fa-shirt"></i>
+    <% end %>
      <%= link_to new_clothe_path, class: "three" do %>
       <%= image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669982496/plus_logo_hppjja.png" %>
     <% end %>
-
     <i class="fa-solid fa-heart" id="four"></i>
-
     <i class="nav-item dropdown" id="five">
-
-
       <i class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
-            <%= image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669131989/EM_LA_BELLE_sqrqgt.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Profile", pages_path, class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>
@@ -28,5 +29,4 @@
         <% end %>
       </i>
     </i>
-
 </div>
