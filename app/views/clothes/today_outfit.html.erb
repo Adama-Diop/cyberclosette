@@ -1,4 +1,8 @@
-<div class="container">
+
+<div class="container" id="carrousel-container">
+
+<h4> Hello <%=@current_user.email %> </h4>
+
 
 <% @categories.each_with_index do |category, id| %>
 <% locked_clothe_for_category = Clothe.locked_in(category.clothes, current_user) %>
@@ -11,7 +15,7 @@
        <div class="position-absolute bottom-0 start-50 translate-middle">
           <%= form_with url: delete_element_path, method: :post do |f| %>
             <%= f.hidden_field :clothe_id, value: locked_clothe_for_category.id %>
-            <%= f.submit "Unlocker", class: "btn btn-primary"%>
+           <%= f.submit "Unlocker", class: "btn btn-primary"%>
           <% end %>
         </div>
       </div>
