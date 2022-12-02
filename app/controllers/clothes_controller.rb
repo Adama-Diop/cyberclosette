@@ -37,9 +37,6 @@ class ClothesController < ApplicationController
     @shoes = Clothe.find_by_category("shoes", @locked_clothes)
     @shoes ||= Clothe.select_by_category("shoes").sample
     @clothes = [@top, @bottom, @shoes].uniq
-    if params[:clothe]
-      @clothe = Clothe.find(params[:clothe])
-    end
 
 
     # si un outfit existe avec la date d'aujourdh'ui on affiche

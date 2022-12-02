@@ -8,13 +8,11 @@
 
 <% if locked_clothe_for_category %>
   <div id="carouselExampleControlsNoTouching-<%=id%>" class="carousel" data-bs-touch="false">
-
     <div class="carousel-inner">
       <div class="carousel-item active position-relative">
-       <img src="https://picsum.photos/id/237/536/354" class="d-block w-100" alt="...">
+       <%= cl_image_tag locked_clothe_for_category.photo.key, width: 150, class:"mx-auto d-block" %>
        <div class="position-absolute bottom-0 start-50 translate-middle">
-          <%= form_with url: delete_element_path, method: :post do |f| %>
-
+            <%= form_with url: delete_element_path, method: :post do |f| %>
             <%= f.hidden_field :clothe_id, value: locked_clothe_for_category.id %>
 
               <%= image_submit_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669913364/lock_qcm1wk.png"%>
@@ -60,4 +58,3 @@
 <% end %>
 <% end %>
 </div>
-
