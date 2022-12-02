@@ -26,6 +26,16 @@
 
   <div class="carousel-inner">
 
+    <% category.clothes.each_with_index do |clothe, index| %>
+      <div class="carousel-item <%=  index == 0 ? 'active' : '' %>  position-relative">
+       <img class="mx-auto d-block" <%= cl_image_tag clothe.photo.key, width: 150 %>>
+       <div class="position-absolute bottom-0 start-50 translate-middle">
+          <% if clothe.is_locked?(current_user) %>
+            <%= form_with url: delete_element_path, method: :post do |f| %>
+              <%= f.hidden_field :clothe_id, value: clothe.id %>
+              <%= f.submit "Unlocker", class: "btn btn-primary"%>
+
+
     <% category.clothes.each_with_index do |clothe, clothe_index| %>
       <div class="carousel-item <%=  clothe_index == 0 ? 'active' : '' %>  position-relative">
         <%= cl_image_tag clothe.photo.key, width: 150, class:"mx-auto d-block" %>
@@ -40,6 +50,15 @@
               <%= f.hidden_field :clothe_id, value: clothe.id %>
               <%= image_submit_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669913354/unlock_trlk6m.png"%>
               <% end %>
+
+            <% end %>
+          <% else %>
+            <%= form_with url: create_element_path, method: :post do |f| %>
+              <%= f.hidden_field :clothe_id, value: clothe.id %>
+              <%= f.submit "Locker", class: "btn btn-primary"%>
+              <% end %>
+
+
             <% end %>
 
         </div>

@@ -1,10 +1,16 @@
 <div id="footer-placeholder">&nbsp;</div>
 <div id="footer">
-   <i class="fa-solid fa-house" id="one"></i>
-   <i class="fa-solid fa-shirt" id="two"></i>
-   <i class="fa-solid fa-plus" id="three"></i>
-   <i class="fa-solid fa-heart" id="four"></i>
-   <i class="nav-item dropdown" id="five">
+    <i class="fa-solid fa-house" id="one"></i>
+    <i class="fa-solid fa-shirt" id="two"></i>
+     <%= link_to new_clothe_path, class: "three" do %>
+      <%= image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669982496/plus_logo_hppjja.png" %>
+    <% end %>
+
+    <i class="fa-solid fa-heart" id="four"></i>
+
+    <i class="nav-item dropdown" id="five">
+
+
       <i class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
@@ -22,4 +28,5 @@
         <% end %>
       </i>
     </i>
+
 </div>
