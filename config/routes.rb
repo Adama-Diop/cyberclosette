@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   post "/delete_element", to: "outfits#delete_element"
   resources :clothes, only: [:new, :create, :index, :show]
 
+  resources :users, only: [:new, :create, :show]
+  resources :pages, only: [:index]
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

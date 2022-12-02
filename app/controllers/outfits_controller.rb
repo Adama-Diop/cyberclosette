@@ -18,9 +18,9 @@ class OutfitsController < ApplicationController
   end
 
   def delete_element
-  @outfit = Outfit.find_for_today(current_user)
-  @clothe = Clothe.find(params[:clothe_id].to_i)
-  @outfit.clothes.delete(@clothe)
-  redirect_to root_path
+    @outfit = Outfit.find_for_today(current_user)
+    @clothe = Clothe.find(params[:clothe_id].to_i)
+    @outfit.clothes.delete(@clothe)
+    redirect_to root_path
   end
 end

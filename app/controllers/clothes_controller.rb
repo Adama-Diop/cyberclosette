@@ -39,7 +39,6 @@ class ClothesController < ApplicationController
     @clothes = [@top, @bottom, @shoes].uniq
 
 
-
     # si un outfit existe avec la date d'aujourdh'ui on affiche
     # sinon
     # on predn un fringue de chaque categories au hasard
