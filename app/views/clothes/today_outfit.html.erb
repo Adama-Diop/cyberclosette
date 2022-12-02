@@ -1,9 +1,6 @@
-
 <div class="container" id="carrousel-container">
 
-<h4> Hello <%=@current_user.email %> </h4>
-
-
+<h4> Hello <%=@current_user.email %></h4>
 <% @categories.each_with_index do |category, id| %>
 <% locked_clothe_for_category = Clothe.locked_in(category.clothes, current_user) %>
 <% if locked_clothe_for_category %>
@@ -11,11 +8,13 @@
 
     <div class="carousel-inner">
       <div class="carousel-item active position-relative">
+       <img src="https://picsum.photos/id/237/536/354" class="d-block w-100" alt="...">
 
        <div class="position-absolute bottom-0 start-50 translate-middle">
           <%= form_with url: delete_element_path, method: :post do |f| %>
             <%= f.hidden_field :clothe_id, value: locked_clothe_for_category.id %>
-           <%= f.submit "Unlocker", class: "btn btn-primary"%>
+
+              <%= image_submit_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669913364/lock_qcm1wk.png"%>
           <% end %>
         </div>
       </div>
@@ -27,19 +26,18 @@
   <div class="carousel-inner">
     <% category.clothes.each_with_index do |clothe, index| %>
       <div class="carousel-item <%=  index == 0 ? 'active' : '' %>  position-relative">
-       <img class="mx-auto d-block" <%= cl_image_tag clothe.photo.key, width: 150 %>
+       <%= cl_image_tag clothe.photo.key, width: 150, class:"mx-auto d-block" %>
        <div class="position-absolute bottom-0 start-50 translate-middle">
        <% if clothe.is_locked?(current_user) %>
           <%= form_with url: delete_element_path, method: :post do |f| %>
             <%= f.hidden_field :clothe_id, value: clothe.id %>
-            <%= f.submit "Unlocker", class: "btn btn-primary"%>
+            <%= image_submit_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669913354/unlock_trlk6m.png"%>
           <% end %>
         <% else %>
           <%= form_with url: create_element_path, method: :post do |f| %>
             <%= f.hidden_field :clothe_id, value: clothe.id %>
-            <%= f.submit "Locker", class: "btn btn-primary"%>
+            <%= image_submit_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669913354/unlock_trlk6m.png"%>
             <% end %>
-
         <% end %>
         </div>
       </div>
