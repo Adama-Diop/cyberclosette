@@ -1,6 +1,8 @@
+
 <div class="container" id="carrousel-container">
 
 <h4> Hello <%=@current_user.email %> </h4>
+
 
 <% @categories.each_with_index do |category, id| %>
 <% locked_clothe_for_category = Clothe.locked_in(category.clothes, current_user) %>
@@ -9,7 +11,7 @@
 
     <div class="carousel-inner">
       <div class="carousel-item active position-relative">
-       <img src="https://picsum.photos/id/237/536/354" class="d-block w-100" alt="...">
+
        <div class="position-absolute bottom-0 start-50 translate-middle">
           <%= form_with url: delete_element_path, method: :post do |f| %>
             <%= f.hidden_field :clothe_id, value: locked_clothe_for_category.id %>
@@ -25,7 +27,7 @@
   <div class="carousel-inner">
     <% category.clothes.each_with_index do |clothe, index| %>
       <div class="carousel-item <%=  index == 0 ? 'active' : '' %>  position-relative">
-       <img src="https://picsum.photos/id/237/536/354" class="d-block w-100" alt="...">
+       <img class="mx-auto d-block" <%= cl_image_tag clothe.photo.key, width: 150 %>
        <div class="position-absolute bottom-0 start-50 translate-middle">
        <% if clothe.is_locked?(current_user) %>
           <%= form_with url: delete_element_path, method: :post do |f| %>
