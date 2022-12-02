@@ -1,6 +1,8 @@
 
 <div class="container" id="carrousel-container">
+
   <h4> Hello <%=@current_user.email %> </h4>
+
   <% @categories.each_with_index do |category, id| %>
       <% locked_clothe_for_category = Clothe.locked_in(category.clothes, current_user) %>
       <% if locked_clothe_for_category %>
@@ -11,7 +13,7 @@
             <div class="position-absolute bottom-0 start-50 translate-middle">
                   <%= form_with url: delete_element_path, method: :post do |f| %>
                   <%= f.hidden_field :clothe_id, value: locked_clothe_for_category.id %>
-                    <%= image_submit_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669913364/lock_qcm1wk.png"%>
+                    <%= image_submit_tag("https://res.cloudinary.com/dplkc6qh4/image/upload/v1669913364/lock_qcm1wk.png",class:"locker") %>
                   <% end %>
               </div>
             </div>
@@ -27,12 +29,14 @@
                   <% if clothe.is_locked?(current_user) %>
                     <%= form_with url: delete_element_path, method: :post do |f| %>
                     <%= f.hidden_field :clothe_id, value: clothe.id %>
-                    <%= image_submit_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669913354/unlock_trlk6m.png"%>
+
+                    <%= image_submit_tag("https://res.cloudinary.com/dplkc6qh4/image/upload/v1669913354/unlock_trlk6m.png", class: "locker") %>
+
                     <% end %>
                   <% else %>
                     <%= form_with url: create_element_path, method: :post do |f| %>
                     <%= f.hidden_field :clothe_id, value: clothe.id %>
-                    <%= image_submit_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669913354/unlock_trlk6m.png"%>
+                    <%= image_submit_tag("https://res.cloudinary.com/dplkc6qh4/image/upload/v1669913354/unlock_trlk6m.png", class: "locker") %>
                     <% end %>
                   <% end %>
                 </div>
