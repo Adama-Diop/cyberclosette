@@ -1,0 +1,6 @@
+<h1>Mon vestiaire</h1>
+<% @clothes.each do |c| %>
+  <% if c.photo.key %>
+    <%= cl_image_tag c.photo.key, width: 150 %>
+  <% end %>
+<% end %>
