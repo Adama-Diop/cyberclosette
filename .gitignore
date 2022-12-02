@@ -39,8 +39,5 @@
 # Ignore Mac and Linux file system files
 *.swp
 .DS_Store
-<<<<<<< HEAD
 .env*
-=======
-.env
->>>>>>> 494e648701282b9f6103ffd85ebac3edb01c6ae8
+
