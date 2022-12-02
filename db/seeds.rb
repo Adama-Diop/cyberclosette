@@ -20,7 +20,7 @@ SEASONS = ["été", "automne", "hiver", "printemps"]
 CATEGORIES = ["top", "bottom", "shoes"]
 COLORS = { black: "rgb(0, 0, 0)", white: "rgb(255, 255, 255)", grey: "rgb(125, 125, 125)",
    red: "rgb(255, 51, 0)", blue: "rgb(0, 102, 255)", green: "rgb(51, 204, 51)",
-  yellow: "rgb(255, 255, 0)" }
+  yellow: "rgb(255, 255, 0)", pink: "rgb(255, 192, 203)" }
 
 # 20.times do
 #   c = Clothe.new(
@@ -139,6 +139,11 @@ clothe16 = Clothe.new(user: user1, color: Color.find_by(name: "blue"))
 clothe16.photo.attach(io: file16, filename: "pants4.png", content_type: "image/png")
 clothe16.save
 
+file17 = URI.open("https://res.cloudinary.com/dplkc6qh4/image/upload/v1669975144/vetementvirtuel_zlq8w8.png")
+clothe17 = Clothe.new(user: user1, color: Color.find_by(name: "pink"))
+clothe17.photo.attach(io: file17, filename: "top6.png", content_type: "image/png")
+clothe17.save
+
 # clothe1 = moods: Mood.find_by(name: "week-end"), seasons: Season.find_by(name: "été"),
 # categories: Category.find_by(name: "bottom"),
 # clothe2 = moods: Mood.find_by(name: "soirée"), seasons: Season.find_by(name: "hiver"),
@@ -166,6 +171,8 @@ ClotheMood.create(clothe: clothe13, mood: Mood.find_by(name: "travail"))
 ClotheMood.create(clothe: clothe14, mood: Mood.find_by(name: "soirée"))
 ClotheMood.create(clothe: clothe15, mood: Mood.find_by(name: "travail"))
 ClotheMood.create(clothe: clothe16, mood: Mood.find_by(name: "travail"))
+ClotheMood.create(clothe: clothe17, mood: Mood.find_by(name: "week-end"))
+
 
 
 
@@ -186,6 +193,8 @@ ClotheCategory.create(clothe: clothe13, category: Category.find_by(name: "bottom
 ClotheCategory.create(clothe: clothe14, category: Category.find_by(name: "top"))
 ClotheCategory.create(clothe: clothe15, category: Category.find_by(name: "bottom"))
 ClotheCategory.create(clothe: clothe16, category: Category.find_by(name: "bottom"))
+ClotheCategory.create(clothe: clothe17, category: Category.find_by(name: "top"))
+
 
 
 
@@ -206,3 +215,4 @@ ClotheSeason.create(clothe: clothe13, season: Season.find_by(name: "hiver"))
 ClotheSeason.create(clothe: clothe14, season: Season.find_by(name: "été"))
 ClotheSeason.create(clothe: clothe15, season: Season.find_by(name: "automne"))
 ClotheSeason.create(clothe: clothe16, season: Season.find_by(name: "automne"))
+ClotheSeason.create(clothe: clothe17, season: Season.find_by(name: "printemps"))
