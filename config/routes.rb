@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :show]
   resources :pages, only: [:index]
+  get "/home", to: "pages#home"
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
