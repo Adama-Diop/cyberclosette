@@ -1,10 +1,9 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne+Mono&display=swap');
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
-
+$body-font: 'Syne Mono', monospace;
+$headers-font: 'Syne Mono', monospace;
 // To use a font file (.woff) uncomment following lines
 // @font-face {
 //   font-family: "Font Name";
@@ -14,3 +13,12 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+a {
+  color: black;
+  text-decoration: none !important;
+  list-style-type: none;
+}
+
+a:hover {
+  color:black !important;
+}

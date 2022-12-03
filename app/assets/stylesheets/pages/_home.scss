@@ -1,4 +1,76 @@
 // Specific CSS for your home-page
 .landing-container {
-  background-image: url("https://res.cloudinary.com/dplkc6qh4/image/upload/v1670083447/49ee70e1fbc1a9f49a2d8489a840c481_ewhbyo.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 80%), url("https://www.museedelaphotographie.com/IMG/arton8.jpg?1537276744");
+  background-size: cover;
+  background-position: center;
+  padding: 364px 0;
+  height: 100%;
+  filter: grayscale(100%);
+  background-repeat: no-repeat;
+  p {
+    color: $light-white;
+  }
+  h1 {
+  color: $light-white;
+  }
+
+}
+
+#logo-homepage {
+width: 250px;
+
+}
+#head-container {
+  position: relative;
+  bottom: 203px;
+  left: 27px;
+}
+
+#landing-container p {
+  color: $light-white;
+  position: relative;
+  bottom: 200px;
+  left: 80px;
+}
+
+#todaymood-container {
+  h2 {
+   text-align: end;
+   color: $light-white;
+   font-size: 18px !important;
+   right: 27px;
+   position: relative;
+   bottom: 170px;
+  }
+}
+
+#logo-container {
+  position: relative;
+  bottom: 129px;
+  left: 85px;
+}
+
+#landing-button {
+  border-style: outset;
+  color: $light-white !important;
+  inline-size: fit-content;
+  padding-left: 20px;
+  padding-right: 20Px;
+  font-family: 'Space Mono', monospace !important;
+  background: 0 !important;
+  text-decoration: none;
+  position: relative;
+  bottom: 49px;
+  left: 60px;
+  font-size: 18px;
+
+  a {
+    color: $light-white !important;
+    text-decoration: none !important;
+    list-style-type: none;
+  }
+
+  a:hover {
+    color: $light-white!important;
+  }
 }
