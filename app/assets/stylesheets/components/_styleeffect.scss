@@ -1,3 +1,4 @@
+/* typing effect */
 .typewriter {
   color: #fff;
   padding: 4px;
@@ -12,13 +13,12 @@
     blink-caret .5s step-end infinite;
 }
 
-/* The typing effect */
+
 @keyframes typing {
   from { width: 0 }
   to { width: 50% }
 }
 
-/* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color:  #ff90e8;
@@ -33,4 +33,31 @@
   0% { opacity:0; }
   50% { opacity:1; }
   100% { opacity:0; }
+}
+
+/* animation pour image qui bouge  */
+
+.shake:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
