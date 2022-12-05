@@ -1,6 +1,16 @@
-<h1>Mon vestiaire</h1>
-<% @clothes.each do |c| %>
-  <% if c.photo.key %>
-    <%= cl_image_tag c.photo.key, width: 150 %>
-  <% end %>
-<% end %>
+<div>
+  <h1>Mon vestiaire</h1>
+    <div>
+    <% @categories.each do |category|%>
+      <%= link_to category.name, clothes_category_path %>
+    </div>
+    <% end %>
+</div>
+
+
+<%# <% @clothes.each do |c| %>
+
+  <%# <% if c.photo.key %> %>
+    <%# <%= cl_image_tag c.photo.key, width: 150 %> %>
+  <%# <% end %> %>
+<%# <% end %> %> %>
