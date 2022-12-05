@@ -1,15 +1,20 @@
 .navbar-lewagon {
-  justify-content: center;
-  background: #FFFFFF;
-  padding-left: 30px;
-  padding-right: 30px;
-
-}
-
-.navbar-icon{
-  width: 115px !important;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  height: $navbar-height;
+}
+
+.navbar-brand {
+  height: 100% !important;
+  max-height: 100% !important;
+  padding: 5px 0;
+}
+
+.navbar-icon {
+  height: 100% !important;
+  max-height: 100% !important;
 }
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -19,5 +24,4 @@
   flex-wrap: inherit;
   align-items: center;
   justify-content: space-around !important;
-  height: 65px;
 }

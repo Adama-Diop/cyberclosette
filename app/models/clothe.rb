@@ -22,7 +22,10 @@ class Clothe < ApplicationRecord
 
   def self.find_by_category(category_name, clothes = [])
     select_by_category(category_name, clothes).first
+  end
 
+  def self.tops
+    find_by_category("top")
   end
 
   def category_name
