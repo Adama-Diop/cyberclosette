@@ -1,17 +1,19 @@
 .navbar-lewagon {
   justify-content: center;
   background: #FFFFFF;
-  border-bottom: solid;
+  padding-left: 30px;
+  padding-right: 30px;
+
 }
 
+.navbar-icon{
+  width: 115px !important;
+  display: flex;
+  justify-content: center;
+}
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
-
-.navbar-lewagon .navbar-brand img {
-  width: 60px;
-}
-
 .container-fluid {
   display: flex;
   flex-wrap: inherit;

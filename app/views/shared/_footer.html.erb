@@ -2,15 +2,17 @@
 <div id="footer">
 
     <%= link_to root_path, id: "one" do %>
-      <i class="fa-solid fa-house"></i>
+      <%= image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1670182097/home_icon_ucufcd.png", class: "vestaire-icon" %>
     <% end %>
     <%= link_to clothes_path, id: "two" do %>
-      <i class="fa-solid fa-shirt"></i>
+      <%= image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1670174776/vestaire_qwhfeg.png", class: "vestaire-icon" %>
     <% end %>
      <%= link_to new_clothe_path, class: "three" do %>
-      <%= image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1669988101/new_plus_kruuwb.png" %>
+
+      <%= image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1670175510/add_icon_m6rloy.png", class: "vestaire-icon" %>
+
     <% end %>
-    <i class="fa-solid fa-heart" id="four"></i>
+    <%= image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1670180061/icone_heart_zfqw7n.png", class: "vestaire-icon" %>
     <i class="nav-item dropdown" id="five">
       <i class="navbar-nav me-auto">
         <% if user_signed_in? %>
