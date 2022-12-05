@@ -4,6 +4,21 @@
     <br>
       <%= f.input :photo, as: :file %>
     <br>
+    <%# Categorie %>
+      <%= f.label :category_ids, "Coucou" %>
+      <%= f.input :category_ids, as: :radio_buttons, collection: Category.all.map{ |cat| [cat.name, cat.id] }, label: '' %>
+    <%# Couleur %>
+      <%= f.label :color_id, "Coucou" %>
+      <%= f.input :color_id, as: :radio_buttons, collection: Color.all.map{ |col| [col.name, col.id] }, label: '' %>
+
+    <%# Saison %>
+    <%= f.label :season_ids, "Coucou" %>
+      <%= f.input :season_ids, as: :radio_buttons, collection: Season.all.map{ |s| [s.name, s.id] }, label: '' %>
+
+    <%# Mood %>
+    <%= f.label :mood_ids, "Coucou" %>
+      <%= f.input :mood_ids, as: :radio_buttons, collection: Mood.all.map{ |m| [m.name, m.id] }, label: '' %>
+
       <%= f.submit  %>
   <% end %>
 </div>

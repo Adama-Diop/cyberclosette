@@ -1,6 +1,6 @@
 class ClothesController < ApplicationController
   # before_action :set_clothe, only: [:show]
-  before_action :set_color, only: [:create]
+  # before_action :set_color, only: [:create]
 
   def create
     @clothe = Clothe.new(clothe_params)
@@ -18,7 +18,7 @@ class ClothesController < ApplicationController
 
   def index
     @clothes = Clothe.all
-@categories = Category.all
+    @categories = Category.all
   end
 
   def show
@@ -52,7 +52,7 @@ class ClothesController < ApplicationController
   private
 
   def clothe_params
-    params.require(:clothe).permit(:photo)
+    params.require(:clothe).permit(:photo, :color_id, :category_ids, :mood_ids, :season_ids)
   end
 
   def set_clothe
