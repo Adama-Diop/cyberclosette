@@ -3,11 +3,13 @@ Rails.application.routes.draw do
   root to: "clothes#today_outfit"
   post "/create_element", to: "outfits#create_element"
   post "/delete_element", to: "outfits#delete_element"
-  resources :clothes, only: [:new, :create, :index, :show]
+  get "clothes/category", to: "clothes#show"
+
+  resources :clothes, only: [:new, :create, :index]
 
   resources :users, only: [:new, :create, :show]
-  resources :pages, only: [:index]
   get "/home", to: "pages#home"
+  get "/profile", to: "pages#profile"
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

@@ -1,4 +1,14 @@
-<h1> Bonjour <%= current_user.first_name %> </h1>
+<h1> Bonjour <%= current_user.first_name %> ♊️  </h1>
 <% if current_user.photo.key %>
   <%= cl_image_tag current_user.photo.key, width: 150 %>
 <% end %>
+<p><%= link_to "Modifier mon profil", edit_user_registration_path(@user)%></p>
+<div class="week-outfit">
+  <h2>Mes tenues de la semaine</h2>
+  <h4>Lundi </h4>
+  <img src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670097845/Capture_d_%C3%A9cran_2022-12-03_%C3%A0_21.03.34_jqiveb.png" alt="monday-outfit" width="200px">
+  <h4>Mardi </h4>
+  <img src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670097846/Capture_d_%C3%A9cran_2022-12-03_%C3%A0_21.01.01_i8xvbx.png" alt="tuesday-outfit" width="200px">
+  <h4>Mercredi</h4>
+  <img src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670097848/Capture_d_%C3%A9cran_2022-12-03_%C3%A0_21.00.18_h4wgsq.png" alt="wednesday outfit" width="200px">
+</div>
