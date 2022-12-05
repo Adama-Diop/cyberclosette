@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   root to: "clothes#today_outfit"
   post "/create_element", to: "outfits#create_element"
   post "/delete_element", to: "outfits#delete_element"
-  get "clothes/category", to: "clothes#show"
 
   resources :clothes, only: [:new, :create, :index]
+  resources :categories, only: :show
 
   resources :users, only: [:new, :create, :show]
   get "/home", to: "pages#home"
