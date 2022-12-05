@@ -39,9 +39,11 @@
                   <% else %>
                     <%= form_with url: create_element_path, method: :post do |f| %>
                     <%= f.hidden_field :clothe_id, value: clothe.id %>
+
                       <div class="shake">
                         <%= image_submit_tag("https://res.cloudinary.com/dplkc6qh4/image/upload/v1669913354/unlock_trlk6m.png", class: "locker") %>
                       </div>
+
                     <% end %>
                   <% end %>
                 </div>
