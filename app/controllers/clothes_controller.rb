@@ -5,7 +5,7 @@ class ClothesController < ApplicationController
   def create
     @clothe = Clothe.new(clothe_params)
     @clothe.user = current_user
-    if @clothe.save
+    if @clothe.save!
       redirect_to clothe_path(@clothe)
     else
       render "new", status: :unprocessable_entity
@@ -18,11 +18,10 @@ class ClothesController < ApplicationController
 
   def index
     @clothes = Clothe.all
-@categories = Category.all
+    @categories = Category.all
   end
 
   def show
-    @clothes = Clothe.all
   end
 
   def today_outfit
