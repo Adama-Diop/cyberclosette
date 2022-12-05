@@ -1,0 +1,46 @@
+.container-profile {
+  display: grid;
+  border-radius: 5px;
+  background-color: black;
+  margin: 10px;
+  padding: 10px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.profile-pic {
+  grid-column: 2/3;
+  grid-row: 1/4;
+}
+// .container-profile h1 {
+//   grid-column: 1/1;
+//   grid-row: 2/4;
+//   color: white;
+//   text-decoration: underline;
+// }
+.container-profile img {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  width: 200px;
+  border-radius: 50%;
+}
+.container-profile button {
+  grid-column: 2/3;
+  grid-row: 4/4;
+  width: 125px;
+}
+
+div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu .day {
+  display: inline-block;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+.scrollmenu h4 {
+  top: 0;
+}
