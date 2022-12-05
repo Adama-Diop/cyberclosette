@@ -1,0 +1,12 @@
+
+<div class="container-profile">
+  <h1> Bonjour <%= current_user.first_name %> </h1>
+  <% if current_user.photo.key %>
+    <%= cl_image_tag current_user.photo.key, width: 150 %>
+  <% end %>
+  <p>♊️</p>
+</div>
+<div class="week-outfit">
+  <h2>Mes tenues de la semaine</h2>
+
+</div>

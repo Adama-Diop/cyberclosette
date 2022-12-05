@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :clothes, only: [:new, :create, :index, :show]
 
   resources :users, only: [:new, :create, :show]
-  resources :pages, only: [:index]
   get "/home", to: "pages#home"
+  get "/profile", to: "pages#profile"
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
