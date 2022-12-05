@@ -1,5 +1,5 @@
 class ClothesController < ApplicationController
-  before_action :set_clothe, only: [:show]
+  # before_action :set_clothe, only: [:show]
   before_action :set_color, only: [:create]
 
   def create
@@ -18,9 +18,11 @@ class ClothesController < ApplicationController
 
   def index
     @clothes = Clothe.all
+@categories = Category.all
   end
 
   def show
+    @clothes = Clothe.all
   end
 
   def today_outfit
