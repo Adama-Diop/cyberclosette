@@ -1,8 +1,14 @@
-<div>
-  <h1>Mon vestiaire</h1>
-    <div>
-    <% @categories.each do |category|%>
-      <%= link_to category.name, category_path(category) %>
+<div class="vestiaire-container">
+  <div class="vestiaire-title">
+    <h1>Mon vestiaire</h1>
+  </div>
+
+  <div class="clothe-container">
+   <%= image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1670258647/IMG_9613_ksgvc3.png" %>
+    <div class="clothe-name">
+      <% @categories.each do |category|%>
+        <%= link_to category.name, category_path(category) %>
+      <% end %>
     </div>
-    <% end %>
+  </div>
 </div>
