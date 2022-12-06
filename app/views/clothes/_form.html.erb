@@ -2,7 +2,8 @@
   <%= simple_form_for(clothe) do |f| %>
     <img src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670265077/upload_lxtaja.png" class="title-section">
     <br>
-      <%= f.input :photo, as: :file  %>
+      <i class="fa-regular fa-star"><%= f.label "PHOTO", class: "label" %></i>
+      <%= f.input :photo, as: :file, label: false %>
     <br>
     <%# Categorie %>
     <div class="category">
