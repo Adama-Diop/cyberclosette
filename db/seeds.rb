@@ -139,6 +139,22 @@ clothe17 = Clothe.new(user: user1, color: Color.find_by(name: "pink"))
 clothe17.photo.attach(io: file17, filename: "top6.png", content_type: "image/png")
 clothe17.save
 
+file18 = URI.open("https://res.cloudinary.com/dplkc6qh4/image/upload/v1670258647/IMG_9613_ksgvc3.png")
+clothe18 = Clothe.new(user: user1, color: Color.find_by(name: "pink"))
+clothe18.photo.attach(io: file18, filename: "top7.png", content_type: "image/png")
+clothe18.save
+
+file19 = URI.open("https://res.cloudinary.com/dplkc6qh4/image/upload/v1670258685/IMG_9614_rkmjzu.png")
+clothe19 = Clothe.new(user: user1, color: Color.find_by(name: "pink"))
+clothe19.photo.attach(io: file19, filename: "skirt4.png", content_type: "image/png")
+clothe19.save
+
+file20 = URI.open("https://res.cloudinary.com/dplkc6qh4/image/upload/v1670258693/IMG_9615_og6rvh.png")
+clothe20 = Clothe.new(user: user1, color: Color.find_by(name: "grey"))
+clothe20.photo.attach(io: file20, filename: "shoes5.png", content_type: "image/png")
+clothe20.save
+
+
 ClotheMood.create(clothe: clothe1, mood: Mood.find_by(name: "soirée"))
 ClotheMood.create(clothe: clothe3, mood: Mood.find_by(name: "week-end"))
 ClotheMood.create(clothe: clothe4, mood: Mood.find_by(name: "week-end"))
@@ -155,6 +171,11 @@ ClotheMood.create(clothe: clothe14, mood: Mood.find_by(name: "soirée"))
 ClotheMood.create(clothe: clothe15, mood: Mood.find_by(name: "travail"))
 ClotheMood.create(clothe: clothe16, mood: Mood.find_by(name: "travail"))
 ClotheMood.create(clothe: clothe17, mood: Mood.find_by(name: "week-end"))
+ClotheMood.create(clothe: clothe18, mood: Mood.find_by(name: "week-end"))
+ClotheMood.create(clothe: clothe19, mood: Mood.find_by(name: "week-end"))
+ClotheMood.create(clothe: clothe20, mood: Mood.find_by(name: "week-end"))
+
+
 
 ClotheCategory.create(clothe: clothe1, category: Category.find_by(name: "top"))
 ClotheCategory.create(clothe: clothe3, category: Category.find_by(name: "top"))
@@ -172,6 +193,9 @@ ClotheCategory.create(clothe: clothe14, category: Category.find_by(name: "top"))
 ClotheCategory.create(clothe: clothe15, category: Category.find_by(name: "bottom"))
 ClotheCategory.create(clothe: clothe16, category: Category.find_by(name: "bottom"))
 ClotheCategory.create(clothe: clothe17, category: Category.find_by(name: "top"))
+ClotheCategory.create(clothe: clothe18, category: Category.find_by(name: "top"))
+ClotheCategory.create(clothe: clothe19, category: Category.find_by(name: "bottom"))
+ClotheCategory.create(clothe: clothe20, category: Category.find_by(name: "shoes"))
 
 ClotheSeason.create(clothe: clothe1, season: Season.find_by(name: "été"))
 ClotheSeason.create(clothe: clothe3, season: Season.find_by(name: "printemps"))
@@ -189,3 +213,6 @@ ClotheSeason.create(clothe: clothe14, season: Season.find_by(name: "été"))
 ClotheSeason.create(clothe: clothe15, season: Season.find_by(name: "automne"))
 ClotheSeason.create(clothe: clothe16, season: Season.find_by(name: "automne"))
 ClotheSeason.create(clothe: clothe17, season: Season.find_by(name: "printemps"))
+ClotheSeason.create(clothe: clothe18, season: Season.find_by(name: "printemps"))
+ClotheSeason.create(clothe: clothe19, season: Season.find_by(name: "printemps"))
+ClotheSeason.create(clothe: clothe20, season: Season.find_by(name: "printemps"))
