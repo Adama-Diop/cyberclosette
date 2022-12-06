@@ -1,11 +1,11 @@
 class ClothesController < ApplicationController
   # before_action :set_clothe, only: [:show]
-  before_action :set_color, only: [:create]
+  # before_action :set_color, only: [:create]
 
   def create
     @clothe = Clothe.new(clothe_params)
     @clothe.user = current_user
-    if @clothe.save
+    if @clothe.save!
       redirect_to clothe_path(@clothe)
     else
       render "new", status: :unprocessable_entity
@@ -18,11 +18,10 @@ class ClothesController < ApplicationController
 
   def index
     @clothes = Clothe.all
-@categories = Category.all
+    @categories = Category.all
   end
 
   def show
-    @clothes = Clothe.all
   end
 
   def today_outfit
@@ -52,7 +51,7 @@ class ClothesController < ApplicationController
   private
 
   def clothe_params
-    params.require(:clothe).permit(:photo)
+    params.require(:clothe).permit(:photo, :color_id, :category_ids, :mood_ids, :season_ids)
   end
 
   def set_clothe

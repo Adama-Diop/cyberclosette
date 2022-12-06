@@ -1,0 +1,7 @@
+<h1>My <%= @category.name %></h1>
+
+<div>
+  <% @clothes.each do |clothe| %>
+    <p><%= cl_image_tag clothe.photo.key, width: 150 %></p>
+  <% end %>
+</div>
