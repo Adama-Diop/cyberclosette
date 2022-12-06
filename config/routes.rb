@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show]
   get "/home", to: "pages#home"
   get "/profile", to: "pages#profile"
-
+  get "/favoris", to: "pages#favoris"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
