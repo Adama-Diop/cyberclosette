@@ -9,10 +9,24 @@
 }
 
 .clothe-container {
-  overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 26px;
+  justify-content: center;
+  padding: 26px;
+}
+
+.clothe-card {
+  border-radius: 5px;
+  width: 100%;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+
+}
+
+.clothe-card img {
+  max-height: 100%;
+  height: auto;
+  display: block;
 }
