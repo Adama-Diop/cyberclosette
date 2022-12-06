@@ -1,7 +1,7 @@
 .container-profile {
   display: grid;
   border-radius: 5px;
-  background-color: black;
+  background-color: #7E73FF;
   margin: 10px;
   padding: 10px;
   margin-top: 30px;
@@ -23,6 +23,8 @@
   grid-row: 3/4;
   width: 200px;
   border-radius: 50%;
+  border-color: black;
+  border-width: 2px;
 }
 .container-profile button {
   grid-column: 2/3;
