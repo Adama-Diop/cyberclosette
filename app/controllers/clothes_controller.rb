@@ -1,5 +1,5 @@
 class ClothesController < ApplicationController
-  # before_action :set_clothe, only: [:create]s
+
   # before_action :set_color, only: [:create]
 
   def create
