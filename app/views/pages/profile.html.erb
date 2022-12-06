@@ -1,5 +1,6 @@
 
 <div class="container-profile">
+
   <div class="profile-pic">
     <% if current_user.photo.key %>
       <%= cl_image_tag current_user.photo.key, width: 125 %>

@@ -1,3 +1,4 @@
+
 <div class="vestiaire-container">
   <div class="vestiaire-title">
     <h1>Mon vestiaire</h1>
@@ -9,6 +10,12 @@
       <% @categories.each do |category|%>
         <%= link_to category.name, category_path(category) %>
       <% end %>
+
+<div class="upload-container">
+  <img src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670265077/closet_xf5fvp.png" class="title-section">
+    <div>
+    <% @categories.each do |category|%>
+      <%= link_to category.name, category_path(category) %>
     </div>
   </div>
 </div>

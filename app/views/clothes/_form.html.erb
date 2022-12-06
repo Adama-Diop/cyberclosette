@@ -1,24 +1,29 @@
-<div class="container">
+<div class="upload-container">
   <%= simple_form_for(clothe) do |f| %>
-    <img src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670233943/upload_q5jbjy.png">
+    <img src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670265077/upload_lxtaja.png" class="title-section">
     <br>
-      <%= f.input :photo, as: :file %>
+      <%= f.input :photo, as: :file  %>
     <br>
     <%# Categorie %>
-      <%= f.label :category_ids, "Coucou" %>
-      <%= f.input :category_ids, as: :radio_buttons, collection: Category.all.map{ |cat| [cat.name, cat.id] }, label: '' %>
+    <div class="category">
+      <i class="fa-regular fa-star"><%= f.label :category_ids, "Categorie", class: "label"%></i>
+      <%= f.input :category_ids, as: :check_boxes, collection: Category.all.map{ |cat| [cat.name, cat.id] }, label: '', input_html: { class: "tag-selector" },item_wrapper_class: 'tag-item' %>
     <%# Couleur %>
-      <%= f.label :color_id, "Coucou" %>
-      <%= f.input :color_id, as: :radio_buttons, collection: Color.all.map{ |col| [col.name, col.id] }, label: '' %>
-
+    </div>
+    <div class="color">
+      <i class="fa-regular fa-star"><%= f.label :color_id, "Couleur", class: "label" %></i>
+      <%= f.input :color_id, as: :check_boxes, collection: Color.all.map{ |col| [col.name, col.id] }, label: '', input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
+    </div>
     <%# Saison %>
-    <%= f.label :season_ids, "Coucou" %>
-      <%= f.input :season_ids, as: :radio_buttons, collection: Season.all.map{ |s| [s.name, s.id] }, label: '' %>
-
+    <div class="season">
+    <i class="fa-regular fa-star"><%= f.label :season_ids, "Saison", class: "label" %></i>
+      <%= f.input :season_ids, as: :check_boxes, collection: Season.all.map{ |s| [s.name, s.id] }, label: '', input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
+    </div>
     <%# Mood %>
-    <%= f.label :mood_ids, "Coucou" %>
-      <%= f.input :mood_ids, as: :radio_buttons, collection: Mood.all.map{ |m| [m.name, m.id] }, label: '' %>
-
+    <div class="mood">
+    <i class="fa-regular fa-star"><%= f.label :mood_ids, "Mood", class: "label" %></i>
+      <%= f.input :mood_ids, as: :check_boxes, collection: Mood.all.map{ |m| [m.name, m.id] }, label: '', input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
+    </div>
       <%= f.submit  %>
   <% end %>
 </div>
