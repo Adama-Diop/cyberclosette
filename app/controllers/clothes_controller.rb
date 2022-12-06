@@ -1,12 +1,31 @@
 class ClothesController < ApplicationController
-  before_action :set_clothe, only: [:create]
-  before_action :set_color, only: [:create]
+  # before_action :set_clothe, only: [:create]s
+  # before_action :set_color, only: [:create]
 
   def create
     @clothe = Clothe.new(clothe_params)
+    color = Color.find(params[:clothe][:color_id][1].to_i)
     @clothe.user = current_user
-    if @clothe.save!
-      redirect_to clothe_path(@clothe)
+    @clothe.color = color
+    @clothe.save!
+
+    @clothe_cat = ClotheCategory.create!(
+      clothe: @clothe,
+      category: Category.find(params[:clothe][:category_ids][1].to_i)
+    )
+
+    @clothe_mood = ClotheMood.create!(
+      clothe: @clothe,
+      mood: Mood.find(params[:clothe][:mood_ids][1].to_i)
+    )
+
+    @clothe_season = ClotheSeason.new(
+      clothe: @clothe,
+      season: Season.find(params[:clothe][:season_ids][1].to_i)
+    )
+
+    if @clothe_season.save!
+      redirect_to category_path(@clothe_cat.category)
     else
       render "new", status: :unprocessable_entity
     end
@@ -51,7 +70,7 @@ class ClothesController < ApplicationController
   private
 
   def clothe_params
-    params.require(:clothe).permit(:photo, :color_id, :categories_ids, :moods_ids, :seasons_ids)
+    params.require(:clothe).permit(:photo, :color_id, :clothe_categories, :clothe_moods, :clothe_seasons)
   end
 
   def set_clothe
