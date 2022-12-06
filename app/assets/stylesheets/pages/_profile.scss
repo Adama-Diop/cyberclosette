@@ -1,7 +1,6 @@
 .container-profile {
   display: grid;
   border-radius: 5px;
-  background-color: #7E73FF;
   margin: 10px;
   padding: 10px;
   margin-top: 30px;
@@ -45,4 +44,9 @@ div.scrollmenu .day {
 }
 .scrollmenu h4 {
   top: 0;
+}
+
+.container-principal{
+  color: white;
+  background-image: url(https://res.cloudinary.com/dplkc6qh4/image/upload/v1670346329/belles-etoiles-brillantes-dans-ciel-nocturne_181624-622_h7crnr.webp);
 }

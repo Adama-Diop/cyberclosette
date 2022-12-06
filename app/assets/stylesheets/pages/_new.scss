@@ -1,4 +1,19 @@
 .upload-container {
-
+  color: white;
+  font-family: 'Syne Mono', monospace;
   border: solid;
+  padding: 60px;
+  background-image: url("https://img.freepik.com/photos-gratuite/belles-etoiles-brillantes-dans-ciel-nocturne_181624-622.jpg?w=2000&t=st=1670345758~exp=1670346358~hmac=3a7f32bc369f982de727425f613bc8bfe4ee53fac8cf3c6628a93ce4878cea8b");
+  img {
+    position: relative;
+    top: -28px;
+  }
+  p{
+  font-family: 'Syne Mono', monospace;
+  }
+}
+
+.label {
+
+  font-family: 'Orbitron' !important;
 }
