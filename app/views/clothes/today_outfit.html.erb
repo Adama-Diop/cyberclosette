@@ -26,7 +26,6 @@
               <div class="carousel-item <%=  clothe_index == 0 ? 'active' : '' %>  position-relative carousel-<%= category.name %>">
                 <%= cl_image_tag clothe.photo.key, width: 150, class:"mx-auto d-block" %>
                 <div class="position-absolute bottom-0 start-50 translate-middle" >
-
                   <%= form_with url: create_element_path, method: :post do |f| %>
                   <%= f.hidden_field :clothe_id, value: clothe.id %>
                     <div class="shake">
