@@ -1,7 +1,11 @@
-<h1>My <%= @category.name %></h1>
+<div class="title-section">
+  <img src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670265077/closet_xf5fvp.png">
+</div>
 
-<div>
+<div class="clothe-container">
   <% @clothes.each do |clothe| %>
-    <p><%= cl_image_tag clothe.photo.key, width: 150 %></p>
+    <div class="clothe-card">
+      <p><%= cl_image_tag clothe.photo.key, width: 150 %></p>
+    </div>
   <% end %>
 </div>
