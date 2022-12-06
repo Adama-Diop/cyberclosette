@@ -1,7 +1,7 @@
 
-
 <div class="container" id="carrousel-container">
   <% @categories.each_with_index do |category, id| %>
+
       <% locked_clothe_for_category = Clothe.locked_in(category.clothes, current_user) %>
       <% if locked_clothe_for_category %>
         <div id="carouselExampleControlsNoTouching-<%=id%>" class="carousel" data-bs-touch="false">
@@ -48,7 +48,7 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
+
      </div>
   <% end %>
-
 </div>

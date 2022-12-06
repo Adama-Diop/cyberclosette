@@ -9,14 +9,21 @@
       <%= image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1670261801/add_violet_icon_v71jlo.png", class: "vestaire-icon" %>
 
     <% end %>
-    <%= image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1670261720/heart_violet_cjkoio.png", class: "vestaire-icon" %>
+
+
+    <i class="nav-item dropdown">
+        <%=  image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1670261720/heart_violet_cjkoio.png" , class: "vestaire-icon", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Add to your 💟", favoris_path, class: "dropdown-item" %>
+              <%= link_to "Loved", favoris_path, class: "dropdown-item" %>
+            </div>
+          </i>
+
     <i class="nav-item dropdown" id="five">
       <i class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
-
             <%=  image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1670259850/profile_icone_n_fbhuyw.png" , class: "vestaire-icon", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Profil", profile_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
