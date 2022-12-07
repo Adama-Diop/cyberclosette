@@ -39,11 +39,11 @@ body {
   margin-left: 30px;
 }
 
-input {
+.bouton-update {
  color: #F4F4F4;
   border: solid;
   border-color: #F4F4F4;
-  background: url("https://res.cloudinary.com/dplkc6qh4/image/upload/v1670346329/belles-etoiles-brillantes-dans-ciel-nocturne_181624-622_h7crnr.webp");
+  background: url("https://res.cloudinary.com/dplkc6qh4/image/upload/v1670421897/Capture_d_e%CC%81cran_2022-12-07_a%CC%80_15.04.29_dhumk1.png");
   position: relative;
   top: 8px;
   left: 66px;
@@ -51,17 +51,29 @@ input {
 }
 
 .form-control {
-  color: #F4F4F4;
+
   font-family: 'Syne Mono', monospace;
   position: inherit;
   margin-top: 10px;
 
 }
 
-.category {
-  margin-top: 10px;
-}
 
 #clothe_photo {
+
+  color: #2d1053;
+
+
+}
+
+#user_password {
+ color: white;
+
+}
+
+.upload-picture {
+  background-color: #9747FF;
+
   color: #9747FF;
+
 }

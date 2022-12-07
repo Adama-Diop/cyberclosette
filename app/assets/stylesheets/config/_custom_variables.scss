@@ -1,6 +1,6 @@
-$bottom-height: 40vh;
+$bottom-height: 35vh;
 $top-height: 20vh;
-$shoes-height: 15vh;
+$shoes-height: 20vh;
 $carousel-margin: 16px;
 
 $navbar-height: calc((100vh - #{$top-height} - #{$bottom-height} - #{$shoes-height} - #{$carousel-margin} * 2) / 2);
