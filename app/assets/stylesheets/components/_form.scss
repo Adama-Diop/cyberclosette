@@ -13,15 +13,16 @@
   font-size: 1rem;
   border-radius: 50rem;
   padding: 0.1rem 0.5rem;
-  background-color: #ECEAFF;
-  color: #7E73FF;
-  border: 1px solid #7E73FF;
+  background-color: #c5c5c5;
+  color:  #9747FF;
+  border: 1px solid #9747FF;
   margin-right: 0.6rem;
   margin-bottom: 0.4rem;
 }
 
 .tag-selector:checked + label {
-  background-color: #7E73FF;
+  border: 1px solid #c5c5c5;
+  background-color:#9747FF ;
   color: white;
 }
 
@@ -31,7 +32,38 @@ body {
 .label {
   padding-left: 30px;
   font-size: large;
+ color: #F4F4F4;
+
 }
 .chiant {
   margin-left: 30px;
+}
+
+input {
+ color: #F4F4F4;
+  border: solid;
+  border-color: #F4F4F4;
+  background: url("https://res.cloudinary.com/dplkc6qh4/image/upload/v1670346329/belles-etoiles-brillantes-dans-ciel-nocturne_181624-622_h7crnr.webp");
+  position: relative;
+  top: 8px;
+  left: 66px;
+
+}
+
+.form-control {
+  color: #F4F4F4;
+  font-family: 'Syne Mono', monospace;
+  position: inherit;
+  margin-top: 10px;
+
+}
+
+.category {
+  margin-top: 10px;
+}
+
+#clothe_photo {
+  color: #9747FF;
+
+
 }
