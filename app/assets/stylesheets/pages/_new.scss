@@ -7,6 +7,7 @@
   img {
     position: relative;
     top: -28px;
+    left: 62px;
   }
   p{
   font-family: 'Syne Mono', monospace;
@@ -16,4 +17,10 @@
 .label {
 
   font-family: 'Orbitron' !important;
+}
+
+.fa-star {
+    color: white;
+    position: relative;
+    left: 9px;
 }
