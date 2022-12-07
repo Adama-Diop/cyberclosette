@@ -31,3 +31,22 @@
   height: auto;
   display: block;
 }
+
+.one-clothe {
+  padding: 0px 19px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  margin-top: 101px;
+}
+
+.clothe {
+  margin-bottom: 89px;
+}
+
+.clothe-button {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  width: 75%;
+}
