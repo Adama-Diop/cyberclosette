@@ -1,6 +1,5 @@
 class ClothesController < ApplicationController
-
-  # before_action :set_color, only: [:create]
+  before_action :set_clothe, only: [:show, :destroy]
 
   def create
     @clothe = Clothe.new(clothe_params)
@@ -41,6 +40,12 @@ class ClothesController < ApplicationController
   end
 
   def show
+  end
+
+  def destroy
+    category = @clothe.categories.first
+    @clothe.destroy
+    redirect_to category_path(category), status: :see_other
   end
 
   def today_outfit
