@@ -1,3 +1,4 @@
+
 <div >
   <% if @category.name == "top" %>
     <img class="title-section" src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670421777/top_uitnpt.png">
@@ -10,6 +11,7 @@
 
 <div class="clothe-container">
   <% @clothes.each_with_index do |clothe, i| %>
+
     <div class="clothe-card">
       <%= link_to clothe_path(clothe) do %>
         <%= cl_image_tag clothe.photo.key, width: 150 %>
@@ -17,3 +19,18 @@
     </div>
   <% end %>
 </div>
+
+
+ <%# <% if clothes.category == @top %>
+   <%#<div >
+    <img class="title-section" src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670265077/closet_xf5fvp.png">
+  </div>
+  <% elsif clothes.category == @bottom %>
+  <%#  <div >
+      <img class="title-section" src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670265077/closet_xf5fvp.png">
+    </div>
+ <% else clothes.category == @shoes %>
+   <%# <div >
+      <img class="title-section" src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670265077/closet_xf5fvp.png">
+    </div>
+ <% end %>

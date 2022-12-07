@@ -1,0 +1,22 @@
+.favoris-container {
+  color: white;
+  font-family: 'Syne Mono', monospace;
+  border: solid;
+  padding: 60px;
+  img {
+    position: relative;
+    top: -28px;
+    width: 158px;
+  }
+  p{
+  font-family: 'Syne Mono', monospace;
+  }
+  background-image: url("https://res.cloudinary.com/dplkc6qh4/image/upload/v1670346329/belles-etoiles-brillantes-dans-ciel-nocturne_181624-622_h7crnr.webp")
+}
+
+.favoris-clothe {
+  img {
+    top: -2px;
+    width: 172px;
+  }
+}
