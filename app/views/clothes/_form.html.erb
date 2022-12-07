@@ -25,6 +25,8 @@
     <i class="fa-regular fa-star"><%= f.label :mood_ids, "Mood", class: "label" %></i>
       <%= f.input :mood_ids, as: :check_boxes, collection: Mood.all.map{ |m| [m.name, m.id] }, label: '', input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
     </div>
+
       <%= f.submit  %>
+
   <% end %>
 </div>
