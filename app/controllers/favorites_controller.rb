@@ -1,6 +1,9 @@
 class FavoritesController < ApplicationController
   def destroy
-    redirect_to favorite_path, status: :see_other
+    @clothe = Clothe.find(params[:id])
+    @favorite = Favorite.find_by(clothe: @clothe, user: current_user)
+    @favorite.destroy
+    redirect_to favoris_path, status: :see_other
   end
 
   def add_to_favorites
