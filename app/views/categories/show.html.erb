@@ -1,9 +1,17 @@
 
-<div class="clothe-container">
- <div>
-  <img class="title-section" src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670265077/closet_xf5fvp.png">
+<div >
+  <% if @category.name == "top" %>
+    <img class="title-section" src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670421777/top_uitnpt.png">
+    <% elsif @category.name == "bottom" %>
+    <img class="title-section" src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670421777/bottom_nnrqrw.png">
+    <% elsif @category.name == "shoes" %>
+    <img class="title-section" src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670421777/shoes_xiy41d.png">
+    <% end %>
 </div>
-  <% @clothes.each do |clothe| %>
+
+<div class="clothe-container">
+  <% @clothes.each_with_index do |clothe, i| %>
+
     <div class="clothe-card">
       <%= link_to clothe_path(clothe) do %>
         <%= cl_image_tag clothe.photo.key, width: 150 %>
