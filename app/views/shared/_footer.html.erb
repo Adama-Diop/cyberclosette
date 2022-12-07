@@ -20,12 +20,10 @@
 
 
     <i class="nav-item dropdown">
-        <%=  image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1670345596/heart_violet_koy6gx.png" , class: "vestaire-icon", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Add to your 💟", favoris_path, class: "dropdown-item" %>
-              <%= link_to "Loved", favoris_path, class: "dropdown-item" %>
-            </div>
-          </i>
+      <%= link_to favoris_path, class: "two" do %>
+        <%=  image_tag "https://res.cloudinary.com/dplkc6qh4/image/upload/v1670345596/heart_violet_koy6gx.png" , class: "vestaire-icon"%>
+      <% end %>
+    </i>
 
 
     <i class="nav-item dropdown" id="five">

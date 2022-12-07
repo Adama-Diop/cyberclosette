@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   post "/create_element", to: "outfits#create_element"
   post "/delete_element", to: "outfits#delete_element"
 
-  resources :clothes, only: [:new, :create, :index]
-  resources :categories, only: :show
+  resources :clothes, only: [:new, :create, :index, :show, :destroy]
+  resources :categories, only: [:show]
+  resources :favorites, only: :destroy
+  post "add_favorite", to: "favorites#add_to_favorites"
 
   resources :users, only: [:new, :create, :show]
   get "/home", to: "pages#home"
