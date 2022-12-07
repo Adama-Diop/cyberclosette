@@ -7,6 +7,7 @@
   align-content: center;
   justify-items: center;
   background-position: center;
+
 }
 
 
@@ -20,6 +21,15 @@
   opacity: 0.7;
 }
 
+.days-title {
+ color: pink;
+}
+
+.tenues-du-jour {
+  color: pink;
+  text-align: center;
+  margin-top: 10px;
+}
 
 // .container-profile h1 {
 //   grid-column: 1/1;
@@ -55,6 +65,7 @@ div.scrollmenu .day {
 }
 
 .container-principal{
-  color: white;
-  background-image: url(https://res.cloudinary.com/dplkc6qh4/image/upload/v1670346329/belles-etoiles-brillantes-dans-ciel-nocturne_181624-622_h7crnr.webp);
+  color: black;
+  background-color: black;
+  // background-image: url(https://res.cloudinary.com/dplkc6qh4/image/upload/v1670346329/belles-etoiles-brillantes-dans-ciel-nocturne_181624-622_h7crnr.webp);
 }
