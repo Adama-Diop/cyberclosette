@@ -7,8 +7,10 @@
       <%= cl_image_tag current_user.photo.key, width: 125 %>
     <% end %>
   </div>
-  <img src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670239150/kisspng-constellation-gemini-orion-zodiac-sagittarius-constellation-5abf3dbf378d68.6223169315224826232276_esnnlj.png" alt="gemini">
-  <button><%= link_to "Modifier mon profil", edit_user_registration_path(@user)%></button>
+  <%# <img src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670239150/kisspng-constellation-gemini-orion-zodiac-sagittarius-constellation-5abf3dbf378d68.6223169315224826232276_esnnlj.png" alt="gemini"> %>
+  <div class="button-profile">
+    <%= link_to "Modifier mon profil", edit_user_registration_path(@user) %>
+  </div>
 </div>
 <div class="week-outfit">
   <h2>Mes tenues de la semaine</h2>
