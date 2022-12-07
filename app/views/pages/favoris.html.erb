@@ -1,1 +1,12 @@
 <img src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670265077/loved_rwigak.png" class="title-section">
+
+<div>
+  <ul>
+    <% @user_favorite_clothes.each do |clothe| %>
+      <li>
+        <%= cl_image_tag clothe.photo.key, height: 300, width: 400, crop: :fit, class:"show-img" %>
+          <%= link_to "Delete", favorite_path(clothe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      </li>
+    <% end %>
+  </ul>
+</div>

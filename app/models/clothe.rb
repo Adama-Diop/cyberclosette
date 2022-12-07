@@ -9,6 +9,7 @@ class Clothe < ApplicationRecord
   has_many :seasons, through: :clothe_seasons, dependent: :destroy
   has_many :clothe_outfits, dependent: :destroy
   has_many :outfits, through: :clothe_outfits, dependent: :destroy
+  has_many :favorites, dependent: :destroy
   has_one_attached :photo
 
   def self.select_by_category(category_name, clothes = [])
