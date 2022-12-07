@@ -14,7 +14,6 @@ Season.destroy_all
 Color.destroy_all
 User.destroy_all
 
-
 user_photo = URI.open("https://res.cloudinary.com/dplkc6qh4/image/upload/v1669123386/Capture_d_%C3%A9cran_2022-11-22_%C3%A0_14.22.44_w4jkic.png")
 user1 = User.create(email: "coucou@gmail.com", password: "coucou", first_name: "Camille", date_of_birth: "1995-10-05",
 city: "Marseille")
