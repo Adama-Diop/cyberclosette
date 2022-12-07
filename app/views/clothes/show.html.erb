@@ -1,12 +1,18 @@
-<div>
-  <%= cl_image_tag @clothe.photo.key, height: 300, width: 400, crop: :fit, class:"show-img" %>
-</div>
+<div class="one-clothe">
+  <div class="clothe">
+    <%= cl_image_tag @clothe.photo.key, height: 300, width: 400, crop: :fit, class:"show-img" %>
+  </div>
 
-<div>
-  <% unless Favorite.find_by(user: current_user, clothe: @clothe).nil? %>
-    <p>Already in my favorites</p>
-  <% else %>
-    <%= link_to "Add to favorite",  add_favorite_path(clothe: @clothe), data: { turbo_method: "post" } %>
-  <% end %>
-  <%= link_to "Delete", clothe_path(@clothe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  <div class="clothe-button">
+    <div class="add-delete">
+      <% unless Favorite.find_by(user: current_user, clothe: @clothe).nil? %>
+        <p>In my favorites !</p>
+      <% else %>
+      <%= link_to "Add to favorite",  add_favorite_path(clothe: @clothe), data: { turbo_method: "post" } %>
+      <% end %>
+    </div>
+    <div class="add-delete">
+      <%= link_to "Delete", clothe_path(@clothe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    </div>
+  </div>
 </div>
