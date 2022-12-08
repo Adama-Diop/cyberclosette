@@ -1,5 +1,6 @@
 
-<div >
+<div class="background-image">
+  <div class="titles">
   <% if @category.name == "top" %>
     <img class="title-section title-background" src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670421777/top_uitnpt.png">
     <% elsif @category.name == "bottom" %>
@@ -7,7 +8,7 @@
     <% elsif @category.name == "shoes" %>
     <img class="title-section title-background" src="https://res.cloudinary.com/dplkc6qh4/image/upload/v1670421777/shoes_xiy41d.png">
     <% end %>
-</div>
+  </div>
 
 <div class="clothe-container">
   <% @clothes.each_with_index do |clothe, i| %>
@@ -19,7 +20,7 @@
     </div>
   <% end %>
 </div>
-
+</div>
 
  <%# <% if clothes.category == @top %>
    <%#<div >
