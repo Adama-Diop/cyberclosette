@@ -70,3 +70,12 @@ div.scrollmenu .day {
   top: 43px;
   // background-image: url(https://res.cloudinary.com/dplkc6qh4/image/upload/v1670346329/belles-etoiles-brillantes-dans-ciel-nocturne_181624-622_h7crnr.webp);
 }
+
+.ligne {
+  position: absolute;
+  top: 252px;
+  width: 100%;
+  height: 17px;
+  background-color: rgb(102, 31, 132);
+  filter: blur(4px);
+}
