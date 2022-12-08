@@ -13,16 +13,16 @@
   font-size: 1rem;
   border-radius: 50rem;
   padding: 0.1rem 0.5rem;
-  background-color: #c5c5c5;
-  color:  #9747FF;
-  border: 1px solid #9747FF;
+  background-color: white;
+  color: #3c1abc ;
+  border: 1px solid #3c1abc;
   margin-right: 0.6rem;
   margin-bottom: 0.4rem;
 }
 
 .tag-selector:checked + label {
-  border: 1px solid #c5c5c5;
-  background-color:#9747FF ;
+  border: 1px solid white;
+  background-color: #3c1abc ;
   color: white;
 }
 
@@ -72,8 +72,8 @@ body {
 }
 
 .upload-picture {
-  background-color: #9747FF;
+  background-color: #3c1abc;
 
-  color: #9747FF;
+  color: #3c1abc;
 
 }
