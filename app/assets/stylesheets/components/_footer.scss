@@ -75,11 +75,7 @@ width: 80px;
   border: none;
   margin-right: none !important;
   inset: auto 0px 0px 0px !important;
-  clear:both;
-  width:100%;
-  overflow: hidden;
-  text-align: center;
-  transition: height .4s ease;
+  transform: translate3d(-13px, -77px, 0px) !important;
 }
 .dropdown-item:active {
   background-color: #3c1abc;
