@@ -1,15 +1,12 @@
 .container-profile {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  background-image: url("https://res.cloudinary.com/dplkc6qh4/image/upload/v1670402431/Needs_%E4%BF%B3%E5%8F%A5_mmmbhd.gif");
   width: 100%;
   height: 261px;
   align-content: center;
   justify-items: center;
   background-position: center;
-
 }
-
 
 .profile-pic {
   margin-top: 26px;
@@ -18,7 +15,6 @@
 .profile-pic img {
   border-radius: 50%;
   width: 150px;
-  opacity: 0.7;
 }
 
 .days-title {
@@ -65,21 +61,6 @@ div.scrollmenu .day {
 
 .container-principal{
   color: black;
-  background-color: white;
-  position: relative;
-  top: 43px;
-
+  background-image: url("https://res.cloudinary.com/dplkc6qh4/image/upload/v1670497088/N_O_S___%C3%82me_Sombre_EN_R%C3%89%C3%89CRITURE_lqdhbg.gif");
   // background-image: url(https://res.cloudinary.com/dplkc6qh4/image/upload/v1670346329/belles-etoiles-brillantes-dans-ciel-nocturne_181624-622_h7crnr.webp);
-}
-
-.ligne {
-  position: absolute;
-  top: 252px;
-  width: 100%;
-  height: 17px;
-  background-color: #3C1ABC;
-  filter: blur(3px);
-}
-.week-outfit {
-  background: linear-gradient(#3C1ABC, #9198e5);
 }
