@@ -23,6 +23,7 @@
   color 0,15s ease-out,
   background-color 0,15s ease-out;
 }
+
 .animated-link:hover {
   transform: translate(-6px, -6px);
   color: white;
@@ -32,12 +33,16 @@
 
 .add-delete {
   border-radius: 5px;
-  background-color: rgb(149 70 229);
+  background-color: rgb(149, 70, 229);
   padding: 12px;
   margin-bottom: 29px;
   width: 100%;
   text-align: center;
   p{
     margin-bottom: 0;
+  }
+
+  a{
+    color: black !important;
   }
 }
