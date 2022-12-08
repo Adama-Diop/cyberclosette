@@ -56,7 +56,6 @@
 #five {
   padding: initial;
   color: black;
-
 }
 
 .vestaire-icon {
@@ -75,7 +74,7 @@ width: 80px;
   border: none;
   margin-right: none !important;
   inset: auto 0px 0px 0px !important;
-  transform: translate3d(-13px, -77px, 0px) !important;
+  // transform: translate3d(-13px, -77px, 0px) !important;
 }
 .dropdown-item:active {
   background-color: #3c1abc;
@@ -86,7 +85,8 @@ width: 80px;
   border-radius: 15px;
   margin: 2px;
   color: #3c1abc;
-  width: 100px;
+  width: 200px;
+  font-size: x-large;
   margin-right: 0px;
   text-align: center;
   align-items: center;
@@ -95,4 +95,10 @@ width: 80px;
 .dropdown-item:hover {
   color: white;
   background-color: #3c1abc;
+}
+.fuck {
+  .dropdown-menu-end {
+    transform: translate3d(-112px, -77px, 0px) !important;
+
+  }
 }
